@@ -14,14 +14,9 @@ namespace FiguresPrinting.ViewModels
         public Square Square { get; set; }
         public Triangle Triangle { get; set; }
         public DelegateCommand RandomizeCommand { get; private set; }
-        private readonly IEnumerable<IRandomizeService> _services;
+        public int CurrentTab { get; set; }
 
-        private int _currentTab;
-        public int CurrentTab
-        {
-            get => _currentTab;
-            set => SetProperty(ref _currentTab, value);
-        }
+        private readonly IEnumerable<IRandomizeService> _services;
 
         public ShellViewModel(Circle circle, Rectangle rectangle, Square square, Triangle triangle, IEnumerable<IRandomizeService> services)
         {

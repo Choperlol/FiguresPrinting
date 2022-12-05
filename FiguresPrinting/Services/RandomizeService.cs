@@ -48,6 +48,9 @@ namespace FiguresPrinting.Services
 
             if (shape is Square square)
                 square.Diagonal = _randomizer.Next(150);
+
+            if (shape is Rectangle rectangle)
+                rectangle.CornerRaduis = _randomizer.Next(100);
         }
     }
 }
